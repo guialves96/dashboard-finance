@@ -5,20 +5,11 @@ import { Button } from "@/app/_components/ui/button";
 import TransactionTypeBadge from "@/app/_components/ui/type-badge";
 import {
   TRANSACTION_CATEGORY_LABELS,
-  TRANSACTION_PAYMENT_LABELS,
+  TRANSACTION_PAYMENT_METHOD_LABELS,
 } from "@/app/_constants/transactions";
 import { Transaction } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { TrashIcon } from "lucide-react";
-
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-// export type Payment = {
-//   id: string
-//   amount: number
-//   status: "pending" | "processing" | "success" | "failed"
-//   email: string
-// }
 
 export const transactionsColumns: ColumnDef<Transaction>[] = [
   {
@@ -42,7 +33,7 @@ export const transactionsColumns: ColumnDef<Transaction>[] = [
     accessorKey: "paymentMethod",
     header: "Método de Pagamento",
     cell: ({ row: { original: transaction } }) =>
-      TRANSACTION_PAYMENT_LABELS[transaction.paymentMethod],
+      TRANSACTION_PAYMENT_METHOD_LABELS[transaction.paymentMethod],
   },
   {
     accessorKey: "date",
