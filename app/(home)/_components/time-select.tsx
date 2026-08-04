@@ -17,7 +17,7 @@ const MONTH_OPTIONS = [
   { value: "05", label: "May" },
   { value: "06", label: "June" },
   { value: "07", label: "July" },
-  { value: "08", label: "Agosto" },
+  { value: "08", label: "August" },
   { value: "09", label: "September" },
   { value: "10", label: "October" },
   { value: "11", label: "November" },

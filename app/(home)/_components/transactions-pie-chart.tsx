@@ -1,18 +1,18 @@
 "use client";
 
-import { Card, CardContent } from "@/app/_components/ui/card";
+import { Pie, PieChart } from "recharts";
 
-import { TransactionType } from "@prisma/client";
-import { TransactionPercentagePerType } from "@/app/_data/get-dashboard/types";
-import { PiggyBankIcon, TrendingDownIcon, TrendingUpIcon } from "lucide-react";
-import PercentageItem from "./percentage-item";
+import { Card, CardContent } from "@/app/_components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/app/_components/ui/chart";
-import { Pie, PieChart } from "recharts";
+import { TransactionType } from "@prisma/client";
+import { TransactionPercentagePerType } from "@/app/_data/get-dashboard/types";
+import { PiggyBankIcon, TrendingDownIcon, TrendingUpIcon } from "lucide-react";
+import PercentageItem from "./percentage-item";
 
 const chartConfig = {
   [TransactionType.INVESTMENT]: {
