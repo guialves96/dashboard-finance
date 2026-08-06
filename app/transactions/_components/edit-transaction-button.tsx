@@ -1,9 +1,9 @@
 "use client";
 
 import { PencilIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/app/_components/ui/button";
 import { useState } from "react";
-import UpsertTransactionDialog from "./upsert-transaction-dialog";
+import UpsertTransactionDialog from "@/app/_components/upsert-transaction-dialog";
 import { Transaction } from "@prisma/client";
 
 interface EditTransactionButtonProps {
